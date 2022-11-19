@@ -37,8 +37,8 @@ function Game() {
         invaderInitialVelocity: 25,
         invaderAcceleration: 0,
         invaderDropDistance: 20,
-        rocketVelocity: 120,
-        rocketMaxFireRate: 2,
+        rocketVelocity: 200,
+        rocketMaxFireRate: 20,
         gameWidth: 400,
         gameHeight: 300,
         fps: 50,
@@ -46,7 +46,7 @@ function Game() {
         invaderRanks: 5,
         invaderFiles: 10,
         shipSpeed: 120,
-        levelDifficultyMultiplier: 0.2,
+        levelDifficultyMultiplier: 0.8,
         pointsPerInvader: 5,
         limitLevelIncrease: 25
     };
@@ -566,7 +566,7 @@ PlayState.prototype.draw = function(game, dt, ctx) {
     ctx.fillRect(this.ship.x - (this.ship.width / 2), this.ship.y - (this.ship.height / 2), this.ship.width, this.ship.height);
 
     //  Draw invaders.
-    ctx.fillStyle = '#006600';
+    ctx.fillStyle = 'orange';
     for(var i=0; i<this.invaders.length; i++) {
         var invader = this.invaders[i];
         ctx.fillRect(invader.x - invader.width/2, invader.y - invader.height/2, invader.width, invader.height);
